@@ -11,7 +11,7 @@ $font-size-large: 20px;
 $button-default-padding: 12px 8px;
 
 // Animation
-$button-transition-color: color 0.3s;
+$button-transition: all 0.3s;
 
 
 .btn {
@@ -24,6 +24,10 @@ $button-transition-color: color 0.3s;
 
 .btn-capitalize {
     text-transform: capitalize;
+}
+
+.btn-uppercase {
+    text-transform: uppercase;
 }
 
 .btn-sm {
@@ -44,7 +48,7 @@ $button-transition-color: color 0.3s;
     border-style: solid;
     border-width: 2px;
     color: $primary-color;
-    transition: $button-transition-color;
+    transition: $button-transition;
     
     &:hover {
         background-color: $primary-color;

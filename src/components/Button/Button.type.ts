@@ -11,7 +11,7 @@ export interface BaseButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
     // variant?: ButtonVariants,
     color?: ButtonColors,
     size?: ButtonSizes,
-    capitalize?: boolean,
+    uppercase?: boolean,
     icon?: ReactNode,
 }
 
