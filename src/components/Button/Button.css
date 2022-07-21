@@ -1,0 +1,54 @@
+:root {
+    /* Color */
+    --primary-color: #00FF00;
+    --primary-color-inverted: #FFFFFF;
+
+    /* Typography */
+    --font-size-small: 12px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+
+    /* Spacing */
+    --button-default-padding: 12px 8px;
+
+    /* Animation */
+    --button-transition: all 0.3s;
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--button-default-padding);
+}
+
+.btn-capitalize {
+    text-transform: capitalize;
+}
+
+.btn-sm {
+    font-size: var(--font-size-small);
+}
+
+.btn-md {
+    font-size: var(--font-size-medium);
+}
+
+.btn-lg {
+    font-size: var(--font-size-large);
+}
+
+.btn-primary {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    border-style: solid;
+    border-width: 2px;
+    color: var(--primary-color);
+    transition: var(--button-transition);
+    
+}
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-inverted);
+}

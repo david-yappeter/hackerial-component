@@ -1,4 +1,5 @@
-import './Button.scss';
+// import './Button.scss';
+import './Button.css';
 import { ButtonProps } from './Button.type';
 import ButtonLink from './ButtonLink/index';
 import ButtonBase from './ButtonBase/index';
