@@ -11,7 +11,7 @@ $font-size-large: 20px;
 $button-default-padding: 12px 8px;
 
 // Animation
-$button-transition: all 0.3s;
+$button-transition: all 0.2s;
 
 
 .btn {
@@ -20,6 +20,8 @@ $button-transition: all 0.3s;
     justify-content: center;
     align-items: center;
     padding: $button-default-padding;
+    font-family: monospace;
+    cursor: pointer;
 }
 
 .btn-capitalize {
@@ -42,7 +44,7 @@ $button-transition: all 0.3s;
     font-size: $font-size-large;
 }
 
-.btn-primary {
+.btn-border {
     background-color: transparent;
     border-color: $primary-color;
     border-style: solid;
@@ -54,4 +56,10 @@ $button-transition: all 0.3s;
         background-color: $primary-color;
         color: $primary-color-inverted;
     }
+}
+
+.btn-no-border {
+    background-color: transparent;
+    border: none;
+    color: $primary-color,
 }

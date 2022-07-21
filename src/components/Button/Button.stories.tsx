@@ -9,13 +9,20 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const HelloWorld = Template.bind({});
-
-HelloWorld.args = {
+export const HTMLChildren  = Template.bind({});
+HTMLChildren.args = {
     children: <h1>Hello World</h1>,
+    variant: 'border',
+    color: 'primary',
+    uppercase: false,
+    size: 'small',
 };
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-    children: 'Click Me',
+export const StringChildren = Template.bind({});
+StringChildren.args = {
+    children: 'Hello World',
+    variant: 'border',
+    color: 'primary',
+    uppercase: false,
+    size: 'small',
 };

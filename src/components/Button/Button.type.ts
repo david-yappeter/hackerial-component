@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-// export type ButtonVariants = 'contained';
+export type ButtonVariants = 'border' | 'no-border';
 export type ButtonSizes = 'small' | 'medium' | 'large';
 export type ButtonColors = (
     'primary'
@@ -8,7 +8,7 @@ export type ButtonColors = (
 );
 
 export interface BaseButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    // variant?: ButtonVariants,
+    variant?: ButtonVariants,
     color?: ButtonColors,
     size?: ButtonSizes,
     uppercase?: boolean,

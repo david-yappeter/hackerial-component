@@ -6,6 +6,7 @@ const ButtonBase: React.FC<BaseButtonProps> = (props: BaseButtonProps) => {
     const {
         className,
         children,
+        variant = 'border',
         color = 'primary',
         uppercase = false,
         size = 'small',
@@ -13,7 +14,8 @@ const ButtonBase: React.FC<BaseButtonProps> = (props: BaseButtonProps) => {
     } = props;
 
     const btnCls =  classnames({
-        'btn btn-primary': true,
+        'btn': true,
+        [`btn-${variant}`]: true,
         'btn-uppercase': uppercase,
         'btn-sm': size === 'small',
         'btn-md': size === 'medium',
