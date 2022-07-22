@@ -61,5 +61,9 @@ $button-transition: all 0.2s;
 .btn-no-border {
     background-color: transparent;
     border: none;
-    color: $primary-color,
+    color: $primary-color;
+
+    &:hover {
+        text-decoration: underline;
+    }     
 }

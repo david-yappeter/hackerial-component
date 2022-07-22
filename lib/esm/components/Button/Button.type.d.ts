@@ -1,10 +1,12 @@
 import React, { ReactNode } from "react";
+export declare type ButtonVariants = 'border' | 'no-border';
 export declare type ButtonSizes = 'small' | 'medium' | 'large';
 export declare type ButtonColors = ('primary' | 'secondary');
 export interface BaseButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    variant?: ButtonVariants;
     color?: ButtonColors;
     size?: ButtonSizes;
-    capitalize?: boolean;
+    uppercase?: boolean;
     icon?: ReactNode;
 }
 export interface LinkButtonProps extends BaseButtonProps {

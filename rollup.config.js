@@ -26,9 +26,6 @@ export default {
     resolve(),
     commonjs({
       include: "node_modules/**",
-      namedExports: {
-        "node_modules/react-is/index.js": ["isFragment", "ForwardRef", "Memo"],
-      },
     }),
     // typescript({ useTsconfigDeclarationDir: true }),
     typescript({

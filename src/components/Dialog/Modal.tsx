@@ -1,5 +1,7 @@
 import React from "react";
+import { Button } from "..";
 import { BaseModalProps } from './Modal.types';
+import ReactPortal from "./portal";
 
 const Modal: React.FC<BaseModalProps> = (props: BaseModalProps) => {
     const {
@@ -14,12 +16,20 @@ const Modal: React.FC<BaseModalProps> = (props: BaseModalProps) => {
     }
 
     return(
-        <div className="modal" {...rest}>
-            <button onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {e.stopPropagation();handleClose(e)}} className="close-btn">
-        Close
-            </button>
-            <div className="modal-content">{children}</div>
-        </div>
+        <ReactPortal wrapperId="__presentation">
+            <div className="modal" {...rest}>
+                <div className="modal-content">
+                    <div className="modal-body">
+                        {children}
+                    </div>
+                    <div className="modal-footer">
+                        <Button component="button" variant="no-border" onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {e.stopPropagation();handleClose(e)}} className="close-btn">
+                            Close
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        </ReactPortal>
     )
 };
 
