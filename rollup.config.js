@@ -1,3 +1,4 @@
+import path from "path";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "rollup-plugin-typescript2";
@@ -28,16 +29,13 @@ export default [
       commonjs({
         include: "node_modules/**",
       }),
-      // typescript({ useTsconfigDeclarationDir: true }),
-      typescript({
-        typescript: require("typescript"),
-      }),
+      typescript({tsconfig: "./tsconfig.json"}),
       json(),
       sass({
         insert: true,
       }),
       svgr(),
-      terser(),
+      // terser(),
     ],
   },
 ];
