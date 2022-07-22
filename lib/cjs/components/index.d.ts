@@ -1,2 +1,3 @@
 import Button from "./Button/index";
-export { Button };
+import Dialog from "./Dialog/index";
+export { Button, Dialog };

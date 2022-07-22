@@ -1,8 +1,13 @@
 {
   "name": "hackerial-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/cjs/index.d.ts",
+  "files": [
+    "./lib"
+  ],
   "scripts": {
     "rollup": "rollup -c",
     "storybook": "start-storybook -p 6006",
