@@ -8,37 +8,39 @@ import sass from "rollup-plugin-sass";
 import pkg from "./package.json";
 import svgr from "@svgr/rollup";
 
-export default {
-  input: "src/index.ts",
-  output: [
-    {
-      file: "./lib/cjs/index.js",
-      format: "cjs",
-    },
-    {
-      file: "./lib/esm/index.js",
-      format: "es",
-    },
-  ],
-  external: [...Object.keys(pkg.peerDependencies || {})],
-  plugins: [
-    peerDepsExternal(),
-    resolve(),
-    commonjs({
-      include: "node_modules/**",
-    }),
-    // typescript({ useTsconfigDeclarationDir: true }),
-    typescript({
-      typescript: require("typescript"),
-    }),
-    json(),
-    sass({
-      insert: true,
-    }),
-    svgr(),
-    terser(),
-  ],
-};
+export default [
+  {
+    input: "src/index.ts",
+    output: [
+      {
+        file: "./lib/cjs/index.js",
+        format: "cjs",
+      },
+      {
+        file: "./lib/esm/index.js",
+        format: "es",
+      },
+    ],
+    external: [...Object.keys(pkg.peerDependencies || {})],
+    plugins: [
+      peerDepsExternal(),
+      resolve(),
+      commonjs({
+        include: "node_modules/**",
+      }),
+      // typescript({ useTsconfigDeclarationDir: true }),
+      typescript({
+        typescript: require("typescript"),
+      }),
+      json(),
+      sass({
+        insert: true,
+      }),
+      svgr(),
+      terser(),
+    ],
+  },
+];
 
 // import typescript from "rollup-plugin-typescript2";
 // import pkg from "./package.json";
