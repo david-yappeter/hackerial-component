@@ -8,6 +8,7 @@ const Modal: React.FC<BaseModalProps> = (props: BaseModalProps) => {
         children,
         isOpen,
         handleClose,
+        header,
         ...rest
     } = props;
 
@@ -19,6 +20,7 @@ const Modal: React.FC<BaseModalProps> = (props: BaseModalProps) => {
         <ReactPortal wrapperId="__presentation">
             <div className="modal" {...rest}>
                 <div className="modal-content">
+                    {header && <div className="modal-title">{header}</div>}
                     <div className="modal-body">
                         {children}
                     </div>

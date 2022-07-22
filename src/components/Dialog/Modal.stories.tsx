@@ -14,4 +14,5 @@ HTMLChildren.args = {
     children: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget sapien turpis. Suspendisse vehicula libero quis pellentesque imperdiet. Nullam non convallis risus. Sed quis enim vestibulum, tristique turpis sit amet, fringilla velit. Nullam faucibus tortor ac felis posuere ultrices.</p>,
     isOpen: true,
     handleClose: () => {},
+    header: "Help",
 };

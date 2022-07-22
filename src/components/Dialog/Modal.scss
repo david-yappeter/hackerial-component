@@ -4,13 +4,15 @@ $background-modal: rgba(0, 0, 0, 0.0);
 $background-content: #000000;
 
 // Typography
+$modal-title-font: monospace;
 $modal-font: Courier, monospace;
+$title-font-size: 20px;
+$content-font-size: 12px;
+$content-line-height: 18px;
 
 // Size
 $modal-max-width: 400px;
 $modal-border-width: 2px;
-
-
 
 .modal {
   position: fixed;
@@ -30,11 +32,22 @@ $modal-border-width: 2px;
   font-family: $modal-font;
 }
 
+.modal-title {
+  font-size: $title-font-size;
+  font-family: $modal-title-font;
+  font-weight: bold;
+  color: $primary-color;
+  text-align: center;
+  padding: 12px 0 0;
+}
+
 .modal-content {
   background-color: $background-content;
   border-color: $primary-color;
   border-width: $modal-border-width;
   border-style: solid;
+  font-size: $content-font-size;
+  line-height: $content-line-height;
   max-width: $modal-max-width;
   padding: 0 20px;
 }
