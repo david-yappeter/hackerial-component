@@ -1,0 +1,14 @@
+// Color
+$primary-color: #00FF00;
+$primary-color-inverted: #FFFFFF;
+
+// Typography
+$font-size-small: 12px;
+$font-size-medium: 16px;
+$font-size-large: 20px;
+$font-title: monospace;
+$font-content: Courier, monospace;
+
+* {
+    font-family: $font-content;
+}
