@@ -1,5 +1,10 @@
 @import '../main.scss';
 
+._glitch-stack {
+    user-select: none;
+    overflow: hidden;
+}
+
 ._glitch-stack-1 {
     display: grid;
     grid-template-columns: 1fr;

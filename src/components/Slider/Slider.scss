@@ -1,0 +1,29 @@
+@import '../main.scss';
+
+._slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: $primary-color;
+    height: 4px;
+    border: none;
+}
+
+._slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    background: black;
+    height: 15px;
+    appearance: none;
+    border-radius: none;
+    border: 2px solid white;
+}
+
+._slider::-moz-slider-thumb {
+    -moz-appearance: none;
+    width: 15px;
+    background: black;
+    height: 15px;
+    appearance: none;
+    border-radius: none;
+    border: 2px solid white;
+}
