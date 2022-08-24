@@ -1,5 +1,5 @@
 {
-  "name": "hackerial-component",
+  "name": "@davidyappeter/hackerial-component",
   "peerDependencies": {
     "react": "^17.0.2"
   },

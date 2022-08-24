@@ -1,6 +1,6 @@
 import './Slider.scss';
-import classNames from "classnames";
 import React, { useMemo } from "react";
+import classNames from "classnames";
 import { BaseSliderProps } from "./Slider.types";
 
 const Slider: React.FC<BaseSliderProps> = (props: BaseSliderProps) => {

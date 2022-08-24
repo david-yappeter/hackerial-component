@@ -1,0 +1,43 @@
+@import '../main.scss';
+
+// Font Size
+$h1-font-size: 2em;
+$h2-font-size: 1.5em;
+$h3-font-size: 1.17em;
+$h4-font-size: 1em;
+$h5-font-size: 0.83em;
+$h6-font-size: 0.67em;
+
+._typography {
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+}
+
+._typography-header {
+    font-weight: bold;
+}
+
+._typography-h1 {
+    font-size: $h1-font-size,
+}
+
+._typography-h2 {
+    font-size: $h2-font-size,
+}
+
+._typography-h3 {
+    font-size: $h3-font-size,
+}
+
+._typography-h4 {
+    font-size: $h4-font-size,
+}
+
+._typography-h5 {
+    font-size: $h5-font-size,
+}
+
+._typography-h6 {
+    font-size: $h6-font-size,
+}
