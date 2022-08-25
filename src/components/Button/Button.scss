@@ -6,6 +6,9 @@ $button-default-padding: 12px 8px;
 // Animation
 $button-transition: all 0.2s;
 
+a {
+    text-decoration: none;
+}
 
 .btn {
     position: relative;
