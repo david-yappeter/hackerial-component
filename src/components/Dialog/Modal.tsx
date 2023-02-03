@@ -1,38 +1,58 @@
-import React from "react";
-import { Button } from "..";
+import React from 'react';
+import { Button } from '..';
 import { BaseModalProps } from './Modal.types';
-import ReactPortal from "./portal";
+import ReactPortal from './portal';
+import classNames from 'classnames';
 
 const Modal: React.FC<BaseModalProps> = (props: BaseModalProps) => {
-    const {
-        children,
-        isOpen,
-        handleClose,
-        header,
-        ...rest
-    } = props;
+  const {
+    children,
+    color,
+    handleClose: _handleClose,
+    header,
+    isOpen,
+    withoutCloseButton,
+    ...rest
+  } = props;
 
-    if(!isOpen) {
-        return null;
-    }
+  if (!isOpen) {
+    return null;
+  }
 
-    return(
-        <ReactPortal wrapperId="__presentation">
-            <div className="modal" {...rest}>
-                <div className="modal-content">
-                    {header && <div className="modal-title">{header}</div>}
-                    <div className="modal-body">
-                        {children}
-                    </div>
-                    <div className="modal-footer">
-                        <Button component="button" variant="no-border" onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {e.stopPropagation();handleClose(e)}} className="close-btn">
-                            Close
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        </ReactPortal>
-    )
+  const handleClose = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    e.stopPropagation();
+    _handleClose(e);
+  };
+
+  return (
+    <ReactPortal wrapperId='__presentation'>
+      <div
+        className={classNames({
+          modal: true,
+          error: color === 'error',
+        })}
+        {...rest}
+        onClick={withoutCloseButton ? handleClose : undefined}
+      >
+        <div className='modal-content'>
+          {header && <div className='modal-title'>{header}</div>}
+          <div className='modal-body'>{children}</div>
+          <div className='modal-footer'>
+            {!withoutCloseButton && (
+              <Button
+                component='button'
+                variant='no-border'
+                onClick={handleClose}
+                className='close-btn'
+              >
+                Close
+              </Button>
+            )}
+          </div>
+        </div>
+      </div>
+    </ReactPortal>
+  );
 };
 
 export default Modal;

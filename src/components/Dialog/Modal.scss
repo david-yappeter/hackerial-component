@@ -1,5 +1,6 @@
 // Color 
 $primary-color: #00FF00;
+$error-color: #ff0000;
 $background-modal: rgba(0, 0, 0, 0.0);
 $background-content: #000000;
 
@@ -30,20 +31,28 @@ $modal-border-width: 2px;
   z-index: 999;
   padding: 40px 20px 20px;
   font-family: $modal-font;
+
+  & * {
+    color: $primary-color
+  }
+
+  &.error * {
+    color: $error-color
+  }
 }
 
 .modal-title {
   font-size: $title-font-size;
   font-family: $modal-title-font;
   font-weight: bold;
-  color: $primary-color;
+  color: 'inherit';
   text-align: center;
   padding: 12px 0 0;
 }
 
 .modal-content {
   background-color: $background-content;
-  border-color: $primary-color;
+  border-color: 'inherit';
   border-width: $modal-border-width;
   border-style: solid;
   font-size: $content-font-size;
@@ -55,7 +64,7 @@ $modal-border-width: 2px;
 .modal-body {
 
   & * {
-    color: $primary-color;
+    color: 'inherit';
   }
 }
 
